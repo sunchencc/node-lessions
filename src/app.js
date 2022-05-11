@@ -2,7 +2,7 @@
  * @Author: sunchen
  * @Date: 2022-03-27 19:16:12
  * @LastEditors: sunchen
- * @LastEditTime: 2022-03-27 20:44:41
+ * @LastEditTime: 2022-04-17 10:53:36
  * @Description: www.github.com
  */
 
@@ -13,7 +13,7 @@ const app = new Koa();
 const router = new Router();
 
 router.get('/', async (ctx, next) => {
-    console.log('//////')
+  ctx.res.setHeader('Set-Cookie', 'name=sunchen')
     await next()
   });
 
